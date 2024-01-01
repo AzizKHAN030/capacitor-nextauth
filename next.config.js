@@ -12,7 +12,7 @@ const nextConfig = {
           { key: "Access-Control-Allow-Credentials", value: "true" },
           {
             key: "Access-Control-Allow-Origin",
-            value: "https://mob.api.app",
+            value: "https://capacitor-nextauth.vercel.app/",
           },
           {
             key: "Access-Control-Allow-Methods",

@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   webDir: "out",
   server: {
     androidScheme: "https",
-    hostname: `mob.api.app`,
+    hostname: `capacitor-nextauth.vercel.app`,
   },
 };
 

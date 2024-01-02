@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 import { Button } from "@/components/ui/button";
 import { SessionContext } from "@/hooks/useSession";
-import { loginWithGoogle } from "@/lib/utils";
+import { loginWithProvider } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,8 +52,11 @@ export default function Home() {
           </>
         )}
       </p>
-      <Button onClick={() => loginWithGoogle(callback)}>
+      <Button onClick={() => loginWithProvider(callback, "google")}>
         Sign in with Google
+      </Button>
+      <Button onClick={() => loginWithProvider(callback, "github")}>
+        Sign in with Github
       </Button>
     </main>
   );

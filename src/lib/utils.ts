@@ -7,7 +7,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const loginWithGoogle = async (callback: () => void) => {
+export const loginWithProvider = async (
+  callback: () => void,
+  provider: string
+) => {
   /**
    * Fetches the CSRF token, needed for all requests
    * Bear in mind we need to set credentials to include
@@ -26,7 +29,7 @@ export const loginWithGoogle = async (callback: () => void) => {
    * Generate an oAuth URL for the Twitter provider
    */
   const { url }: { url: string } = await fetch(
-    `${appConfig.apiHost}/api/auth/signin/github`,
+    `${appConfig.apiHost}/api/auth/signin/${provider}`,
     {
       method: "POST",
       headers: {

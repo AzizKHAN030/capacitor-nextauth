@@ -26,7 +26,7 @@ export const loginWithGoogle = async (callback: () => void) => {
    * Generate an oAuth URL for the Twitter provider
    */
   const { url }: { url: string } = await fetch(
-    `${appConfig.apiHost}/api/auth/signin/google`,
+    `${appConfig.apiHost}/api/auth/signin/github`,
     {
       method: "POST",
       headers: {

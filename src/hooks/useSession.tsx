@@ -22,7 +22,10 @@ export function UseSession({ children }: { children: any }) {
         {
           credentials: "include",
         }
-      ).then(res => res.json());
+      ).then(res => {
+        console.log(">>>", res);
+        return res.json();
+      });
       setSession(sess);
     }
 
